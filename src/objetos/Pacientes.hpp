@@ -9,4 +9,6 @@ private:
         int edad;
 public:
         Paciente(string ID, string Nombre, int edad, string Servicio);
+
+        string getServicio() const;
 };
