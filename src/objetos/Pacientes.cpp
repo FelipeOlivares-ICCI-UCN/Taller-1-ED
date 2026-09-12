@@ -1,4 +1,4 @@
-#include "../Pacientes.hpp"
+#include "Pacientes.hpp"
 
 
 Paciente::Paciente(string ID, string Nombre, int edad, string Servicio) {
@@ -7,4 +7,6 @@ Paciente::Paciente(string ID, string Nombre, int edad, string Servicio) {
     this->edad = edad;
     this->Servicio = Servicio;
 }
+
+string Paciente::getServicio() const { return this->Servicio; }
 
