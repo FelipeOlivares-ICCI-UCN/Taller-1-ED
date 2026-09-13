@@ -12,5 +12,7 @@ public:
 
         string getServicio() const;
 
+        void showFullInformation() const;
+
         friend ostream& operator<<(ostream& o, const Paciente& p);
 };

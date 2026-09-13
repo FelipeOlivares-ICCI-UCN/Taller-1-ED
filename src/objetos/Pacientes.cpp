@@ -14,4 +14,12 @@ ostream& operator<<(ostream& o, const Paciente& p) {
     return o;
 }
 
+void Paciente::showFullInformation() const {
+    std::cout << "ID: " << this->ID << endl;
+    std::cout << "Nombre: " << this->Nombre << endl;
+    std::cout << "Edad: " << this->edad << endl;
+    std::cout << "Servicio: " << this->Servicio << endl;
+
+}
+
 
