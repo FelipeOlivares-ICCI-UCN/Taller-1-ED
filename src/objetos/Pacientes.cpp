@@ -10,3 +10,8 @@ Paciente::Paciente(string ID, string Nombre, string edad, string Servicio) {
 
 string Paciente::getServicio() const { return this->Servicio; }
 
+void Paciente::mostrarPaciente() const {
+    cout << this->ID << " - " << this->Nombre << endl;
+}
+
+
