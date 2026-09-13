@@ -7,7 +7,7 @@ void readFileData(const string& filename, Queue<Paciente>& pacientes) {
     std::ifstream file(filename);
 
     if (!file.is_open()) {
-        cerr << "File Not Found!" << endl;
+        cerr << filename << " Not Found!" << endl;
         return;
     }
 
