@@ -1,5 +1,4 @@
 #include "Pacientes.hpp"
-#include <iostream>
 
 Paciente::Paciente(string ID, string Nombre, string edad, string Servicio) {
     this->ID = ID;
@@ -10,8 +9,9 @@ Paciente::Paciente(string ID, string Nombre, string edad, string Servicio) {
 
 string Paciente::getServicio() const { return this->Servicio; }
 
-void Paciente::mostrarPaciente() const {
-    cout << this->ID << " - " << this->Nombre << endl;
+ostream& operator<<(ostream& o, const Paciente& p) {
+    o << p.ID << " - " << p.Nombre;
+    return o;
 }
 
 

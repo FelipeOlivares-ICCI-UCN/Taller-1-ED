@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -11,5 +12,5 @@ public:
 
         string getServicio() const;
 
-        void mostrarPaciente() const;
+        friend ostream& operator<<(ostream& o, const Paciente& p);
 };
