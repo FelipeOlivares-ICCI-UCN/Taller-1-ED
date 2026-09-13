@@ -1,6 +1,6 @@
 #pragma once
 
-#include <string>;
+#include <string>
 using namespace std;
 
 class Paciente {
@@ -11,4 +11,6 @@ public:
         Paciente(string ID, string Nombre, int edad, string Servicio);
 
         string getServicio() const;
+
+        void mostrarPaciente();
 };
