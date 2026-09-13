@@ -7,9 +7,8 @@ int main() {
 
     readFileData("../data/pacientes.txt", Atencion);
 
-    Atencion.top().mostrarPaciente();
+    cout << Atencion.top();
 
-    return 0;
 
 }
 
