@@ -2,7 +2,7 @@
 #include <iostream>
 #include <stdexcept>
 #include "Node.hpp"
-
+#include <iostream>
 
 
 template <class T>
@@ -58,6 +58,17 @@ public:
         }
 
         return start->getValue();
+    }
+
+    void show() {
+        Node<T>* temp = start;
+        int i = 1;
+
+        while (temp != nullptr) {
+            std::cout << i << ") " << temp->getValue() << std::endl;
+            temp = temp->getNext();
+            i++;
+        }
     }
 
 };
