@@ -1,13 +1,19 @@
 #include "FileReading.hpp"
 #include <iostream>
+
+#include "Menu.h"
 #include "../estructuras/Queue.hpp"
+
 
 int main() {
     Queue<Paciente> Atencion;
 
     readFileData("../data/pacientes.txt", Atencion);
 
-    cout << Atencion.top();
+    Menu(Atencion).startMenu();
+
+
+    return 0;
 
 
 }
