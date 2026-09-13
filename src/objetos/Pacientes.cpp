@@ -1,7 +1,7 @@
 #include "Pacientes.hpp"
+#include <iostream>
 
-
-Paciente::Paciente(string ID, string Nombre, int edad, string Servicio) {
+Paciente::Paciente(string ID, string Nombre, string edad, string Servicio) {
     this->ID = ID;
     this->Nombre = Nombre;
     this->edad = edad;
