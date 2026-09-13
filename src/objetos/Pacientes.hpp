@@ -5,12 +5,11 @@ using namespace std;
 
 class Paciente {
 private:
-        string ID, Nombre, Servicio;
-        int edad;
+        string ID, Nombre, Servicio, edad;
 public:
-        Paciente(string ID, string Nombre, int edad, string Servicio);
+        Paciente(string ID, string Nombre, string edad, string Servicio);
 
         string getServicio() const;
 
-        void mostrarPaciente();
+        void mostrarPaciente() const;
 };
