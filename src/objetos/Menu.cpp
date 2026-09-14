@@ -41,3 +41,16 @@ void Menu::displayOptions() {
     cout << "4. Salir" << endl;
 
 }
+
+void Menu::attendPaciente(int numPacientes) {
+    for (int i = 1; i <= numPacientes; i++) {
+        if (atencion.empty()) {
+            std::cout << "Atendiste a todos!" << endl;
+            return;
+        }
+        hospital.addPaciente(atencion.top());
+        atencion.pop();
+    }
+
+
+}
