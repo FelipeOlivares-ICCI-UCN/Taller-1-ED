@@ -30,7 +30,6 @@ int Menu::userInput() {
     string input;
 
     do {
-        displayOptions();
         cout << "Seleccionar opcion: ";
         cin >> input;
 
@@ -38,7 +37,7 @@ int Menu::userInput() {
             return input[0] - '0';
         }
 
-        cout << "Ingrese una opcion valida";
+        cout << "Ingrese una opcion entre 0 y 9" << endl;
 
 
     } while (true);
