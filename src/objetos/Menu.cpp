@@ -64,6 +64,7 @@ void Menu::displayOptions() {
 void Menu::attendPaciente(int numPacientes) {
     for (int i = 1; i <= numPacientes; i++) {
         if (atencion.empty()) {
+            std:cout << "-----------------" << endl;
             std::cout << "Atendiste a todos!" << endl;
             return;
         }
