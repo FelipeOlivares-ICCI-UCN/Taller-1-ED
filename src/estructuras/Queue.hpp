@@ -64,6 +64,10 @@ public:
         Node<T>* temp = start;
         int i = 1;
 
+        if (this->empty()) {
+            return;
+        }
+
         while (temp != nullptr) {
             std::cout << i << ". " << temp->getValue() << std::endl;
             temp = temp->getNext();
