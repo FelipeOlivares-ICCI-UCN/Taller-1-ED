@@ -1,17 +1,20 @@
 #include "FileReading.hpp"
 #include <iostream>
 
-#include "Menu.h"
+#include "../objetos/Menu.h"
 #include "../estructuras/Queue.hpp"
-
 
 int main() {
     Queue<Paciente> Atencion;
 
     readFileData("../data/pacientes.txt", Atencion);
 
-    Menu(Atencion).startMenu();
 
+    if (Atencion.empty()) {
+        return 1;
+    }
+
+    Menu(Atencion).startMenu();
 
     return 0;
 
