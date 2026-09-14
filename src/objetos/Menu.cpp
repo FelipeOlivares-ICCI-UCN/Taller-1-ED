@@ -6,7 +6,18 @@ void Menu::startMenu() {
 
     do {
         cout << "--------------- Opcion " << currentOptionNum << "---------------" << endl;
+        displayOptions();
         input = userInput();
+
+        switch (input) {
+            case 1:
+                cout << "Ingrese el numero de pacientes a atender (Entre 0 y 9)" << endl;
+                subInput = userInput();
+                attendPaciente(subInput);
+
+
+        }
+
         currentOptionNum++;
 
     } while (input != exitOption);
