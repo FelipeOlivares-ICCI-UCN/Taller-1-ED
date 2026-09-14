@@ -9,5 +9,6 @@ add_executable(Taller1
         src/objetos/Pacientes.cpp
         src/logic/FileReading.cpp
         src/logic/Main.cpp
-        src/logic/Menu.cpp
+        src/objetos/Menu.cpp
+        src/objetos/Hospital.cpp
 )
