@@ -65,7 +65,7 @@ public:
         int i = 1;
 
         while (temp != nullptr) {
-            std::cout << i << ") " << temp->getValue() << std::endl;
+            std::cout << i << ". " << temp->getValue() << std::endl;
             temp = temp->getNext();
             i++;
         }
