@@ -2,7 +2,7 @@
 
 void Menu::startMenu() {
     int input = 0;
-
+    int subInput;
 
     do {
         cout << "--------------- Opcion " << currentOptionNum << "---------------" << endl;
