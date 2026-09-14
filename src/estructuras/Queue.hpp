@@ -71,4 +71,13 @@ public:
         }
     }
 
+
+    bool empty() {
+        if (start == nullptr) {
+            return true;
+        }
+
+        return false;
+    }
+
 };
