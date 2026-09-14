@@ -11,6 +11,14 @@ void Menu::startMenu() {
 
         switch (input) {
             case 1:
+                cout << "=== PACIENTES EN ESPERA ==="  << endl << endl;
+
+                atencion.show();
+                if (atencion.empty()) {
+                    cout << "Sin pacientes" << endl;
+                    break;
+
+                }
                 cout << "Ingrese el numero de pacientes a atender (Entre 0 y 9)" << endl;
                 subInput = userInput();
                 attendPaciente(subInput);
@@ -19,6 +27,7 @@ void Menu::startMenu() {
         }
 
         currentOptionNum++;
+
 
     } while (input != exitOption);
 
