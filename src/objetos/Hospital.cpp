@@ -11,7 +11,7 @@ Hospital::Hospital() {
     Departamentos.insertLast(Pediatria);
 }
 
-void Hospital::addPaciente(Paciente paciente) {
+void Hospital::addPaciente(const Paciente& paciente) {
     paciente.showFullInformation();
     std::cout << "---------------------" << std::endl;
     std::cout << "Enviando a " << paciente.getServicio() << endl;
