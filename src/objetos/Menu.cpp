@@ -20,9 +20,23 @@ void Menu::startMenu() {
 
                 }
                 cout << "Ingrese el numero de pacientes a atender (Entre 0 y 9)" << endl;
-                subInput = userInput();
+                subInput = userInput(0, 9);
                 attendPaciente(subInput);
+                break;
 
+            case 2:
+                cout <<"=== DEPARTAMENTOS/SERVICIOS ===" << endl;
+                cout << "1. Urgencias" << endl;
+                cout << "2. MedicinaGeneral" << endl;
+                cout << "3. Cardiologia" << endl;
+                cout << "4. Neurologia" << endl;
+                cout << "5. Traumatologia" << endl;
+                cout << "6. Cirugia" << endl;
+                cout << "7. Pediatria" << endl;
+                cout << "8. Hospitalizacion" << endl;
+
+                cout << endl;
+                subInput = userInput(1, 8);
 
         }
 
