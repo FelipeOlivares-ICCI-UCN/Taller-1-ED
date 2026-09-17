@@ -9,6 +9,14 @@ class LinkedList
 private:
     Node<T>* start;
     Node<T>* end;
+
+    int countNodes(Node<T>* head) {
+        if (head == nullptr) {
+            return 0;
+        }
+        return 1 + countNodes(head->getNext());
+    }
+
 public:
     LinkedList() {
         this->start = nullptr;
@@ -243,8 +251,8 @@ public:
             cursor = cursor->getNext();
         }
 
-        cout << "end: " << this->end->getValue() << endl;
-        cout << "-----------------" << endl;
+    int size() {
+        return countNodes(this->start);
     }
 
 };
