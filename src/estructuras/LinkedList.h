@@ -232,24 +232,18 @@ public:
         this->end = nullptr;
     }
 
-    //Used for debugging
     void printList() {
         if (this->empty()) {
-            cout << "start: " << this->start << endl;
-            cout << "end: " << this->end << endl;
-            cout << "-----------------" << endl;
             return;
         }
 
+        Node<T>* cursor = this->start;
 
-        cout << "start: " << this->start->getValue() << endl;
-
-        Node<T>* cursor = this->start->getNext();
-
-        while (cursor != nullptr && cursor != this->end) {
-            cout << "middle: " << cursor->getValue() << endl;
+        while (cursor != nullptr) {
+            cout << cursor->getValue() << endl;
             cursor = cursor->getNext();
         }
+    }
 
     int size() {
         return countNodes(this->start);
