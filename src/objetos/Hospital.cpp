@@ -49,7 +49,51 @@ void Hospital::addPaciente(const Paciente& paciente) {
     else {
         std::cout << "Rechazado, Servicio desconocido: " << paciente.getServicio()  << std::endl;
     }
+void Hospital::showPacientes(int depNum) {
+    if (depNum < 1 || depNum > 8) {
+        cerr << "That departament number doesnt exist" << endl;
+        return;
+    }
 
+    if (depNum == 1) {
+        cout << "=== Urgencias ===" << endl;
+    }
+
+    else if (depNum == 2) {
+        cout << "=== Medicina General ===" << endl;
+    }
+
+    else if (depNum == 3) {
+        cout << "=== Cardiologia ===" << endl;
+    }
+    else if (depNum == 4) {
+        cout << "=== Neurologia ===" << endl;
+    }
+    else if (depNum == 5) {
+        cout << "=== Traumatologia ===" << endl;
+    }
+    else if (depNum == 6) {
+        cout << "=== Cirugia ===" << endl;
+    }
+    else if (depNum == 7) {
+        cout << "=== Pediatria ===" << endl;
+    }
+    else if (depNum == 8) {
+        cout << "=== Hospitalizacion ===" << endl;
+    }
+
+
+    cout << "Pacientes: " << Departamentos.get(depNum - 1).size() << endl;
+    Departamentos.get(depNum - 1).printList();
 
 }
+
+void Hospital::showHistorial() {
+
+    historial.show();
+}
+
+
+
+
 
