@@ -38,6 +38,13 @@ void Menu::startMenu() {
                 cout << endl;
                 subInput = userInput(1, 8);
 
+                hospital.showPacientes(subInput);
+                break;
+
+            case 3:
+                cout <<"=== HISTORIAL DE ATENCION ===" << endl;
+                hospital.showHistorial();
+                break;
         }
 
         currentOptionNum++;
