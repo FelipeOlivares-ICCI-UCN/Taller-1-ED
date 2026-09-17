@@ -90,7 +90,7 @@ public:
         }
     }
 
-    T get(int index) {
+    T& get(int index) {
         if (this->empty()) {
             throw std::out_of_range("List is empty");
         }
@@ -115,14 +115,14 @@ public:
         return cursor->getValue();
     }
 
-    T getFirst() {
+    T& getFirst() {
         if (this->empty()) {
             throw std::out_of_range("List is empty");
         }
         return this->start->getValue();
     }
 
-    T getLast() {
+    T& getLast() {
         if (this->empty()) {
             throw std::out_of_range("List is empty");
         }
