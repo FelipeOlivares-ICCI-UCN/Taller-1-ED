@@ -21,7 +21,7 @@ private:
 public:
     Hospital();
 
-    void addPaciente(Paciente paciente);
+    void addPaciente(const Paciente& paciente);
 
     void showPacientes(int depNum);
 
