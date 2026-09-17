@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../estructuras/LinkedList.h"
+#include "../estructuras/Stack.h"
 #include "Pacientes.hpp"
 
 class Hospital {
@@ -14,10 +15,15 @@ private:
     LinkedList<Paciente> Cirugia;
     LinkedList<Paciente> Pediatria;
     LinkedList<Paciente> Hospitalizacion;
+
+    Stack<Paciente> historial;
+
 public:
     Hospital();
 
     void addPaciente(Paciente paciente);
 
+    void showPacientes(int depNum);
 
+    void showHistorial();
 };
