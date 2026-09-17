@@ -52,7 +52,7 @@ public:
         }
     }
 
-    T top() {
+    T& top() {
         if (start == nullptr) {
             throw std::out_of_range("Queue is empty");
         }
