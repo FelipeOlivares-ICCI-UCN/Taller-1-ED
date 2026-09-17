@@ -7,7 +7,7 @@ void Menu::startMenu() {
     do {
         cout << "--------------- Opcion " << currentOptionNum << "---------------" << endl;
         displayOptions();
-        input = userInput();
+        input = userInput(1, exitOption);
 
         switch (input) {
             case 1:
@@ -35,7 +35,7 @@ void Menu::startMenu() {
 
 }
 
-int Menu::userInput() {
+int Menu::userInput(int min, int max) {
     string input;
 
     do {
@@ -43,10 +43,14 @@ int Menu::userInput() {
         cin >> input;
 
         if (input.length() == 1 && isdigit(input[0])) {
-            return input[0] - '0';
+            int option = input[0] - '0';
+
+            if (min <= option && option <= max) {
+                return option;
+            }
         }
 
-        cout << "Ingrese una opcion entre 0 y 9" << endl;
+        cout << "Ingrese una opcion entre " << min << "y" << max << endl;
 
 
     } while (true);

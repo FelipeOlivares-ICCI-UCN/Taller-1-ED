@@ -15,7 +15,7 @@ class Menu {
         Menu(Queue<Paciente> &atencion): atencion(atencion) {};
 
         void startMenu();
-        int userInput();
+        int userInput(int min, int max);
         void displayOptions();
         void attendPaciente(int numPacientes);
 
